@@ -17,5 +17,5 @@ Given two 8-bit binary words (byte), compute the product and store it in registe
 #### Problem 4 (Largest of number given):
 Given a finite set of binary words, load them-from memory, identify the largest in the given set, and store this largest number in SRAM.  
 
-There are two solutions to this problem, [one](Problem4.asm) for unsigned and [another](Problem4signed.asm) for signed.  
+There are two solutions to this problem, [`Problem4.asm`](Problem4.asm) for unsigned and [`Problem4signed.asm`](Problem4signed.asm) for signed.  
 Also checkout the [solution](https://github.com/HR-1-1/CourseWork/blob/main/EE2016/LAB%201/LargestNumber.asm) by [Harish](https://github.com/HR-1-1) for a more universal way!  
