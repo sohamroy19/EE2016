@@ -7,31 +7,31 @@ rjmp int1_ISR
 .org $0100
 
 reset:
-        ;Loading stack pointer address
-        LDI R16, $70
-        OUT SPL, R16
-        LDI R16, $00
-        OUT SPH, R16
+            ;Loading stack pointer address
+            LDI R16, $70
+            OUT SPL, R16
+            LDI R16, $00
+            OUT SPH, R16
         
-        ;Interface port B pin0 to be output
-        ;so to view LED blinking
-        LDI R16, $01
-        OUT DDRB, R16
+            ;Interface port B pin0 to be output
+            ;so to view LED blinking
+            LDI R16, $01
+            OUT DDRB, R16
 
-        LDI R16, $00
-        OUT DDRD, R16
+            LDI R16, $00
+            OUT DDRD, R16
 
-        ;Set MCUCR register to enable low level interrupt
-        OUT MCUCR, R16
+            ;Set MCUCR register to enable low level interrupt
+            OUT MCUCR, R16
 
-        ;Set GICR register to enable interrupt 1
-        LDI R16, $80
-        OUT GICR, R16
+            ;Set GICR register to enable interrupt 1
+            LDI R16, $80
+            OUT GICR, R16
 
-        LDI R16, $00
-        OUT PORTB, R16
+            LDI R16, $00
+            OUT PORTB, R16
 
-        SEI
+            SEI
 
 ind_loop:   rjmp ind_loop
 
